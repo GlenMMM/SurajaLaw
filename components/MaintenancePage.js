@@ -19,9 +19,7 @@ function MaintenancePage() {
               Our website is currently under maintanance, for urgent matters
               kindly contact us at:{" "}
               <span className="font-semibold underline cursor-pointer">
-                <a href="mailto:info@surajalaw.com" target="_blank">
-                  info@surajalaw.com
-                </a>
+                <a href="mailto:info@surajalaw.com">info@surajalaw.com</a>
               </span>
               .
             </p>
