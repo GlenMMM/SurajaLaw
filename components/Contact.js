@@ -149,6 +149,19 @@ function Contact({ t }) {
             </div>
           )}
         </form>
+        <div className="text-center w-full pt-10">
+          <p>
+            or contact us at{" "}
+            <a
+              className="font-semibold"
+              href="mailto:info@surajalaw.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              info@surajalaw.com
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
