@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Hero({ t }) {
   return (
-    <div className="flex justify-center items-center px-8 md:px-0">
+    <div className="flex justify-center items-center px-8 md:px-0 w-full relative">
       <div className="w-[240px] h-[200px] sm:w-[400px] border-2 border-boxBorder absolute top-[50px] sm:top-[70px] xl:top-0 -right-[100px] xl:right-[200px] z-0" />
       <div className="w-[300px] h-[180px] xl:w-[500px] xl:h-[500px] border-2 border-boxBorder absolute top-[60px] xl:top-0 -left-[140px] xl:-left-[50px] z-0" />
       <div className="w-[250px] h-[180px] sm:w-[400px] sm:h-[300px] border-2 border-boxBorder absolute top-[200px] xl:top-[220px] left-[50px] xl:left-[200px] z-0" />

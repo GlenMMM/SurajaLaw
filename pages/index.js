@@ -14,7 +14,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-bgCol overflow-hidden">
+    <div className="bg-bgCol overflow-hidden w-full">
       <Head>
         <title>Suraja Law Offices</title>
         <meta name="title" content="Suraja Law Offices" />

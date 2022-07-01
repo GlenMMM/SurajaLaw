@@ -4,13 +4,14 @@ import { Router, useRouter } from "next/router";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import AboutUs from "../../components/AboutUs";
+import Whatsapp from "../../components/Whatsapp";
 
 export default function AboutPage() {
   const { t } = useTranslation();
   const router = useRouter();
   console.log(router.locales);
   return (
-    <div className="bg-bgCol">
+    <div className="bg-bgCol min-h-screen">
       <Head>
         <title>Suraja Law Offices</title>
         <meta name="title" content="Suraja Law Offices" />
@@ -44,6 +45,7 @@ export default function AboutPage() {
       </Head>
       <Navigation />
       <AboutUs t={t} />
+      <Whatsapp />
       <Footer />
     </div>
   );

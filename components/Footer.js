@@ -5,21 +5,21 @@ import Image from "next/image";
 function Footer() {
   return (
     <div className="flex flex-col items-center justify-center bg-footerCol xl:pt-[40px]">
-      <div className="flex flex-col items-start w-full max-w-[500px] md:max-w-[640px] xl:max-w-[1080px] 2xl:max-w-[1280px] xl:pb-[12px] px-8 md:px-0 z-10">
-        <div className="hidden xl:flex justify-between w-full">
+      <div className="flex flex-col items-start w-full max-w-[500px] md:max-w-[640px] xl:max-w-[1080px] 2xl:max-w-[1280px] md:py-[28px] px-8 md:px-0 z-10">
+        <div className="hidden md:flex justify-between w-full">
           <div>
-            <div className="flex items-start text-black">
+            <div className="flex items-start text-black ">
               <Link href="/" passHref>
                 <Image
                   className="object-contain cursor-pointer"
                   src="/surajalaw-logo.png"
                   alt="surajalaw logo"
-                  width={200}
-                  height={100}
+                  width={220}
+                  height={60}
                 />
               </Link>
             </div>
-            <div className="flex flex-col gap-[8px]">
+            <div className="flex flex-col gap-[8px] py-[12px]">
               <p>Menara Rajawali, Lantai 12</p>
               <p>Kuningan Timur, Setiabudi (12950)</p>
               <p>Jakarta Selatan</p>
@@ -28,7 +28,7 @@ function Footer() {
           </div>
           <div className="hidden md:flex">
             <ul className="cursor-pointer flex flex-col gap-[8px]">
-              <h4 className="text-[36px] font-semibold">Menu</h4>
+              <h4 className="text-[24px] font-semibold">Menu</h4>
               <Link href="/" passHref>
                 <li className="text-subTwo hover:font-semibold">Home</li>
               </Link>

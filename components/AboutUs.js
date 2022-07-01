@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutUs({ t }) {
   return (
-    <div className="relative flex justify-center px-8 xl:px-0 py-[70px] xl:pt-[120px] xl:pb-[225px] ">
+    <div className="relative flex justify-center px-8 xl:px-0 py-[70px] xl:pt-[120px] xl:pb-[225px]">
       {/*<div className="sm:h-[200px] sm:w-[400px] border-2 border-boxBorder absolute top-[50px] sm:top-[70px] xl:top-0 -right-[100px] xl:right-[200px] z-0" />
       <div className="w-[300px] h-[180px] xl:w-[500px] xl:h-[500px] border-2 border-boxBorder absolute top-[60px] xl:top-0 -left-[140px] xl:-left-[50px] z-0" />
       <div className="w-[250px] h-[180px] sm:w-[400px] sm:h-[300px] border-2 border-boxBorder absolute top-[200px] xl:top-[220px] left-[50px] xl:left-[200px] z-0" />
@@ -33,7 +33,7 @@ function AboutUs({ t }) {
             {t("common:aboutDesc")}
           </p>
         </div>
-        <div className="flex flex-col items-start ">
+        <div className="flex flex-col items-start sm:items-center">
           <h2 className="text-[28px] xl:text-[56px] py-[26px]">
             {t("about:misiVisi")}
           </h2>
