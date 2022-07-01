@@ -7,7 +7,7 @@ const cors = Cors({
   methods: ["GET", "HEAD"],
 });
 export default async function contact(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "https://surajalaw.com");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
