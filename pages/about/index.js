@@ -1,20 +1,16 @@
 import Head from "next/head";
 import useTranslation from "next-translate/useTranslation";
+import { Router, useRouter } from "next/router";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
+import AboutUs from "../../components/AboutUs";
 
-import Navigation from "../components/Navigation";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Services from "../components/Services";
-import Client from "../components/Client";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Whatsapp from "../components/Whatsapp";
-
-export default function Home() {
+export default function AboutPage() {
   const { t } = useTranslation();
-
+  const router = useRouter();
+  console.log(router.locales);
   return (
-    <div className="bg-bgCol overflow-hidden">
+    <div className="bg-bgCol">
       <Head>
         <title>Suraja Law Offices</title>
         <meta name="title" content="Suraja Law Offices" />
@@ -47,12 +43,7 @@ export default function Home() {
         <meta property="twitter:image" content="/surajalaw.png" />
       </Head>
       <Navigation />
-      <Hero t={t} />
-      <About t={t} />
-      <Services t={t} />
-      <Client t={t} />
-      <Contact t={t} />
-      <Whatsapp />
+      <AboutUs t={t} />
       <Footer />
     </div>
   );

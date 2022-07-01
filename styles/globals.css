@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "alta";
+  src: url("../public/fonts/Alta_caption.otf");
+}
+
+@layer base {
+  body {
+    @apply text-main;
+    @apply font-lato;
+  }
+  h1,
+  h2 {
+    @apply font-alta;
+  }
+}

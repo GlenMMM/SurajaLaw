@@ -11,6 +11,15 @@ module.exports = {
       fontFamily: {
         lato: ["Lato"],
         barlow: ["Barlow Condensed"],
+        alta: ["alta"],
+      },
+      colors: {
+        main: "#294745",
+        subOne: "#393939",
+        subTwo: "#A2854B",
+        bgCol: "#FBFFFF",
+        boxBorder: "#DFEBEA",
+        footerCol: "#DDE7E6",
       },
     },
   },
