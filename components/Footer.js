@@ -20,10 +20,10 @@ function Footer() {
               </Link>
             </div>
             <div className="flex flex-col gap-[8px] py-[12px]">
-              <p>Menara Rajawali, Lantai 12</p>
-              <p>Kuningan Timur, Setiabudi (12950)</p>
-              <p>Jakarta Selatan</p>
-              <p>DKI Jakarta</p>
+              <p>Sampoerna Strategic Square South Tower Level 30</p>
+              <p>Jl. Jendral Sudirman Kav 45-46</p>
+              <p>Jakarta 12930</p>
+              <p>Indonesia</p>
             </div>
           </div>
           <div className="hidden md:flex">

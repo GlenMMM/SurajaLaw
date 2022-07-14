@@ -70,9 +70,10 @@ const Sidebar = ({ isOpen, toggle, route }) => {
             </li>
           </ul>
           <div className="flex flex-col text-[16px] px-10 gap-[8px] absolute bottom-[40px]">
-            <p>Menara Rajawali, Lantai 12</p>
-            <p>Kuningan Timur, Setiabudi (12950)</p>
-            <p>Jakarta Selatan, DKI Jakarta</p>
+            <p>Sampoerna Strategic Square South Tower Level 30</p>
+            <p>Jl. Jendral Sudirman Kav 45-46</p>
+            <p>Jakarta 12930</p>
+            <p>Indonesia</p>
           </div>
         </div>
       </div>

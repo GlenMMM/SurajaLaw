@@ -151,7 +151,7 @@ function Contact({ t }) {
         </form>
         <div className="text-center w-full pt-10">
           <p>
-            or contact us at{" "}
+            {t("common:contactAlt")}
             <a
               className="font-semibold"
               href="mailto:info@surajalaw.com"
