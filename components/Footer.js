@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-function Footer() {
+function Footer({ t }) {
   return (
     <div className="flex flex-col items-center justify-center bg-footerCol xl:pt-[40px]">
       <div className="flex flex-col items-start w-full max-w-[500px] md:max-w-[640px] xl:max-w-[1080px] 2xl:max-w-[1280px] md:py-[28px] px-8 md:px-0 z-10">
@@ -14,8 +14,8 @@ function Footer() {
                   className="object-contain cursor-pointer"
                   src="/surajalaw-logo.png"
                   alt="surajalaw logo"
-                  width={220}
-                  height={60}
+                  width={180}
+                  height={65}
                 />
               </Link>
             </div>
@@ -30,16 +30,25 @@ function Footer() {
             <ul className="cursor-pointer flex flex-col gap-[8px]">
               <h4 className="text-[24px] font-semibold">Menu</h4>
               <Link href="/" passHref>
-                <li className="text-subTwo hover:font-semibold">Home</li>
+                <li className="text-subTwo hover:font-semibold">
+                  {t("common:navHome")}
+                </li>
               </Link>
               <Link href="/about" passHref>
-                <li className="text-subTwo hover:font-semibold">About</li>
+                <li className="text-subTwo hover:font-semibold">
+                  {t("common:navAbout")}
+                </li>
               </Link>
               <Link href="/#services" passHref>
-                <li className="text-subTwo hover:font-semibold">Services</li>
+                <li className="text-subTwo hover:font-semibold">
+                  {" "}
+                  {t("common:navServices")}
+                </li>
               </Link>
               <Link href="/#contact" passHref>
-                <li className="text-subTwo hover:font-semibold">Contact us</li>
+                <li className="text-subTwo hover:font-semibold">
+                  {t("common:navContact")}
+                </li>
               </Link>
             </ul>
           </div>

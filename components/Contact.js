@@ -1,49 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 //require react-hook-form, cors, axios, nodemailer
 
 function Contact({ t }) {
   const list = t("common:topicList");
   const newList = list.split(",");
-  const [selectedTopic, setSelectedTopic] = React.useState(
-    "Banking and Finance"
-  );
+  const [selectedTopic, setSelectedTopic] = useState("Banking and Finance");
   const handleChange = (e) => {
     setSelectedTopic(e.target.value);
   };
 
-  //sent email
-  const axios = require("axios");
-  const [sent, setSent] = React.useState(false);
-  const toggle = () => {
-    setSent(!sent);
-  };
+  //sent email v2
+  const [contactDetail, setContactDetail] = useState([]);
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    watch,
     reset,
+    formState: { errors },
   } = useForm();
-  async function onSubmitForm(values) {
-    let config = {
-      method: "post",
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+  const onSubmit = (data) => {
+    fetch("/api/contact", {
+      method: "POST",
       headers: {
+        Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      data: values,
-    };
-    setSent(true);
-    try {
-      const response = await axios(config);
-      if (response.status == 200) {
-        reset();
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  }
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        console.log("Response received", res);
+        if (res.status === 200) {
+          toast(t("common:toastOk"));
+        } else {
+          toast(t("common:toastFail"));
+        }
+      })
+      .catch((e) => console.log(e));
+    reset();
+  };
+
+  //sent email v1
+  // const axios = require("axios");
+  // const [sent, setSent] = useState(false);
+  // const toggle = () => {
+  //   setSent(!sent);
+  // };
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  //   reset,
+  // } = useForm();
+  // async function onSubmit(values) {
+  //   let config = {
+  //     method: "post",
+  //     url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     data: values,
+  //   };
+  //   setSent(true);
+  //   try {
+  //     const response = await axios(config);
+  //     if (response.status == 200) {
+  //       reset();
+  //     }
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }
 
   return (
     <div
@@ -57,13 +87,13 @@ function Contact({ t }) {
             {t("common:contactTtl")}
           </h2>
         </div>
-        <h3 className="text-[24px] xl:text-[48px] py-[19px] font-alta">
+        <h3 className="text-[24px] xl:text-[40px] py-[19px] font-alta pb-10">
           {t("common:contactTag")}
           <span className="text-subTwo">{t("common:contactTag2")}</span>
         </h3>
         <form
           className="flex flex-col gap-2 items-center w-full"
-          onSubmit={handleSubmit(onSubmitForm)}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex flex-col gap-10 xl:gap-0 xl:flex-row justify-evenly w-full">
             <div className="flex flex-col xl:w-[200px]">
@@ -136,18 +166,9 @@ function Contact({ t }) {
             </div>
           </div>
 
-          {!sent ? (
-            <button className="w-[160px] h-[50px] bg-main text-white mt-[40px]">
-              {t("common:contactBtn")}
-            </button>
-          ) : (
-            <div
-              className="w-[160px] h-[50px] bg-main text-white mt-[40px] flex items-center justify-center cursor-pointer"
-              onClick={toggle}
-            >
-              {t("common:successBtn")}
-            </div>
-          )}
+          <button className="w-[160px] h-[50px] bg-main text-white mt-[40px]">
+            {t("common:contactBtn")}
+          </button>
         </form>
         <div className="text-center w-full pt-10">
           <p>
@@ -163,6 +184,7 @@ function Contact({ t }) {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

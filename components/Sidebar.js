@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const Sidebar = ({ isOpen, toggle, route }) => {
+const Sidebar = ({ isOpen, toggle, route, t }) => {
   return (
     <div
       className={
@@ -50,22 +50,22 @@ const Sidebar = ({ isOpen, toggle, route }) => {
           >
             <li className="w-full">
               <Link href="/" passHref>
-                <a className={`block py-3 px-5`}>Home</a>
+                <a className={`block py-3 px-5`}>{t("common:navHome")}</a>
               </Link>
             </li>
             <li className="w-full">
               <Link href="/about" passHref>
-                <a className={`block py-3 px-5`}>About</a>
+                <a className={`block py-3 px-5`}>{t("common:navAbout")}</a>
               </Link>
             </li>
             <li className="w-full">
               <Link href="/#services" passHref>
-                <a className={`block py-3 px-5`}>Services</a>
+                <a className={`block py-3 px-5`}>{t("common:navServices")}</a>
               </Link>
             </li>
             <li className="w-full">
               <Link href="/#contact" passHref>
-                <a className={`block py-3 px-5`}>Contact us</a>
+                <a className={`block py-3 px-5`}>{t("common:navContact")}</a>
               </Link>
             </li>
           </ul>

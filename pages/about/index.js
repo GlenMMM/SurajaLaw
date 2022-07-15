@@ -43,10 +43,10 @@ export default function AboutPage() {
         />
         <meta property="twitter:image" content="/surajalaw.png" />
       </Head>
-      <Navigation />
+      <Navigation t={t} />
       <AboutUs t={t} />
       <Whatsapp />
-      <Footer />
+      <Footer t={t} />
     </div>
   );
 }

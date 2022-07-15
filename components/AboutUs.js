@@ -21,23 +21,24 @@ function AboutUs({ t }) {
           </h2>
         </div>
 
-        <h2 className="text-[24px] xl:text-[48px] py-[19px]">
+        <h2 className="text-[24px] xl:text-[36px] py-[19px]">
           SURAJA <span className="text-subTwo">LAW OFFICES</span>
         </h2>
-        <div className="flex flex-col items-center ">
-          <h2 className="text-[28px] font-semibold xl:font-normal xl:text-[56px] font-lato">
+        <div className="flex flex-col items-start sm:items-center">
+          <h2 className="text-[22px] font-semibold xl:text-[36px]">
             {t("common:aboutTag")}
           </h2>
-          <h3 className="text-[18px] xl:text-[36px]">{t("common:aboutSub")}</h3>
-          <p className="text-[16px] xl:text-[18px] pt-[26px]">
+          <p className="text-[16px] xl:text-[18px] pt-[26px] text-justify">
             {t("common:aboutDesc")}
           </p>
         </div>
         <div className="flex flex-col items-start sm:items-center">
-          <h2 className="text-[28px] xl:text-[56px] py-[26px]">
+          <h2 className="text-[22px] xl:text-[36px] py-[26px] font-semibold">
             {t("about:misiVisi")}
           </h2>
-          <p className="text-[16px] xl:text-[18px]">{t("about:mvDesc")}</p>
+          <p className="text-[16px] xl:text-[18px] text-justify">
+            {t("about:mvDesc")}
+          </p>
         </div>
       </div>
     </div>

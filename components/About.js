@@ -14,15 +14,14 @@ function About({ t }) {
           </h2>
         </div>
 
-        <h2 className="text-[24px] xl:text-[48px] py-[19px]">
+        <h2 className="text-[24px] xl:text-[40px] py-[19px]">
           SURAJA <span className="text-subTwo">LAW OFFICES</span>
         </h2>
         <div className="flex flex-col items-center ">
-          <h2 className="text-[20px] xl:text-[56px]">{t("common:aboutTag")}</h2>
-          <h3 className="hidden xl:flex xl:text-[36px]">
-            {t("common:aboutSub")}
-          </h3>
-          <p className="text-[16px] xl:text-[18px] pt-[26px]">
+          <h2 className="text-[22px] xl:text-[40px] font-semibold">
+            {t("common:aboutTag")}
+          </h2>
+          <p className="text-[16px] xl:text-[18px] pt-[26px] text-justify">
             {t("common:aboutDesc")}
           </p>
         </div>

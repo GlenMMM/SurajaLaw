@@ -13,7 +13,7 @@ function Services({ t }) {
             {t("common:servicesTtl")}
           </h2>
         </div>
-        <h3 className="text-[24px] xl:text-[48px] py-[19px] font-alta">
+        <h3 className="text-[24px] xl:text-[40px] py-[19px] font-alta">
           {t("common:servicesTag")}
           <span className="text-subTwo">{t("common:servicesTag2")}</span>
         </h3>
@@ -63,6 +63,7 @@ function Services({ t }) {
               <li>{t("common:services5")}</li>
               <li>{t("common:services6")}</li>
               <li>{t("common:services7")}</li>
+              <li>{t("common:services8")}</li>
             </ul>
           </div>
           <div className="relative p-4 shadow-xl w-[320px] h-[320px] bg-white flex items-center justify-center">
@@ -81,9 +82,10 @@ function Services({ t }) {
                 />
               </svg>
 
-              <li>{t("common:services8")}</li>
               <li>{t("common:services9")}</li>
               <li>{t("common:services10")}</li>
+              <li>{t("common:services11")}</li>
+              <li>{t("common:services12")}</li>
             </ul>
           </div>
         </div>

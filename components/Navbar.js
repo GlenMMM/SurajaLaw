@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const Navbar = ({ toggle, route, router }) => {
+const Navbar = ({ toggle, route, router, t }) => {
   return (
     <nav
       className="flex justify-center items-center fixed md:relative top-0 z-30 px-4 py-2 md:px-20 2xl:px-0 w-full bg-bgCol md:bg-transparent"
       role="navigation"
     >
-      <div className="flex justify-between items-center w-full max-w-[500px] md:max-w-[640px] xl:max-w-[980px] 2xl:max-w-[1280px]">
+      <div className="flex justify-between items-center w-full max-w-[500px] md:max-w-[640px] xl:max-w-[980px] 2xl:max-w-[1280px] pt-2">
         <div className="cursor-pointer md:hidden" onClick={toggle}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,15 +24,15 @@ const Navbar = ({ toggle, route, router }) => {
             />
           </svg>
         </div>
-        <div className="md:flex hidden space-x-10 items-center justify-center text-black xl:text-[18px] pt-4">
+        <div className="md:flex hidden space-x-10 items-center justify-center text-black xl:text-[18px]">
           <Link className="p-4" href="/" passHref>
             <a className={`hover:opacity-100 opacity-80 items-center gap-2 `}>
-              Home
+              {t("common:navHome")}
             </a>
           </Link>
           <Link className="p-4" href="/about" passHref>
             <a className={`hover:opacity-100 opacity-80 items-center gap-2`}>
-              About
+              {t("common:navAbout")}
             </a>
           </Link>
           <Link className="p-4" href="#services" passHref>
@@ -40,12 +40,12 @@ const Navbar = ({ toggle, route, router }) => {
               className={`hover:opacity-100 opacity-80 items-center gap-2
               }`}
             >
-              Services
+              {t("common:navServices")}
             </a>
           </Link>
           <Link className="p-4" href="#contact" passHref>
             <a className={`hover:opacity-100 opacity-80 items-center gap-2`}>
-              Contact us
+              {t("common:navContact")}
             </a>
           </Link>
         </div>

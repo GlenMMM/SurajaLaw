@@ -46,14 +46,14 @@ export default function Home() {
         />
         <meta property="twitter:image" content="/surajalaw.png" />
       </Head>
-      <Navigation />
+      <Navigation t={t} />
       <Hero t={t} />
       <About t={t} />
       <Services t={t} />
       <Client t={t} />
       <Contact t={t} />
       <Whatsapp />
-      <Footer />
+      <Footer t={t} />
     </div>
   );
 }
