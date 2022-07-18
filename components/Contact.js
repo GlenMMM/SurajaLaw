@@ -7,11 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Contact({ t }) {
   const list = t("common:topicList");
-  const newList = list.split(",");
-  const [selectedTopic, setSelectedTopic] = useState("Banking and Finance");
-  const handleChange = (e) => {
-    setSelectedTopic(e.target.value);
-  };
+  const newList = list.split("; ");
 
   //sent email v2
   const [contactDetail, setContactDetail] = useState([]);
@@ -43,38 +39,6 @@ function Contact({ t }) {
     reset();
   };
 
-  //sent email v1
-  // const axios = require("axios");
-  // const [sent, setSent] = useState(false);
-  // const toggle = () => {
-  //   setSent(!sent);
-  // };
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  //   reset,
-  // } = useForm();
-  // async function onSubmit(values) {
-  //   let config = {
-  //     method: "post",
-  //     url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     data: values,
-  //   };
-  //   setSent(true);
-  //   try {
-  //     const response = await axios(config);
-  //     if (response.status == 200) {
-  //       reset();
-  //     }
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // }
-
   return (
     <div
       className="flex justify-center px-8 md:px-0 pb-[70px]  xl:pb-[225px]"
@@ -95,74 +59,98 @@ function Contact({ t }) {
           className="flex flex-col gap-2 items-center w-full"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex flex-col gap-10 xl:gap-0 xl:flex-row justify-evenly w-full">
-            <div className="flex flex-col xl:w-[200px]">
-              <label htmlFor="name">{t("common:contactName")}</label>
-              <input
-                type="text"
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "You must enter your name",
-                  },
-                })}
-                className={`border-b border-subTwo bg-inherit outline-none p-2 ${
-                  errors.name ? `ring-2 ring-red-500 focus:ring-red-500` : null
-                }`}
-              ></input>
+          <div className="flex flex-col gap-10 justify-evenly w-full">
+            <div className="flex flex-col xl:flex-row justify-between w-full gap-10 xl:gap-0">
+              <div className="flex flex-col xl:w-[200px]">
+                <label htmlFor="name">{t("common:contactName")}</label>
+                <input
+                  type="text"
+                  {...register("name", {
+                    required: {
+                      value: true,
+                      message: "You must enter your name",
+                    },
+                  })}
+                  className={`border-b border-subTwo bg-inherit outline-none p-2 ${
+                    errors.name
+                      ? `ring-2 ring-red-500 focus:ring-red-500`
+                      : null
+                  }`}
+                ></input>
+              </div>
+              <div className="flex flex-col xl:w-[200px]">
+                <label htmlFor="email">{t("common:contactEmail")}</label>
+                <input
+                  type="text"
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "You must enter your email",
+                    },
+                    minLength: {
+                      value: 8,
+                      message: "This is too short to be an email",
+                    },
+                    maxLength: {
+                      value: 120,
+                      message: "This is too long to be an email",
+                    },
+                    pattern: {
+                      value:
+                        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                      message: "This is not a valid email",
+                    },
+                  })}
+                  className={`border-b border-subTwo bg-inherit outline-none p-2 ${
+                    errors.email
+                      ? `ring-2 ring-red-500 focus:ring-red-500`
+                      : null
+                  }`}
+                ></input>
+              </div>
+              <div className="flex flex-col xl:w-[200px]">
+                <label htmlFor="phone">{t("common:contactPhone")}</label>
+                <input
+                  type="text"
+                  {...register("phone")}
+                  className="border-b border-subTwo bg-inherit outline-none p-2"
+                ></input>
+              </div>
+              <div className="flex flex-col xl:w-[200px]">
+                <label htmlFor="date">{t("common:contactDate")}</label>
+                <input
+                  type="date"
+                  {...register("date")}
+                  className="border-b border-subTwo bg-inherit outline-none p-2"
+                ></input>
+              </div>
+              <div className="flex flex-col xl:w-[200px]">
+                <label htmlFor="time">{t("common:contactTime")}</label>
+                <input
+                  type="text"
+                  {...register("time")}
+                  className="border-b border-subTwo bg-inherit outline-none p-2"
+                  placeholder="17:00"
+                ></input>
+              </div>
             </div>
-            <div className="flex flex-col xl:w-[200px]">
-              <label htmlFor="email">{t("common:contactEmail")}</label>
-              <input
-                type="text"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "You must enter your email",
-                  },
-                  minLength: {
-                    value: 8,
-                    message: "This is too short to be an email",
-                  },
-                  maxLength: {
-                    value: 120,
-                    message: "This is too long to be an email",
-                  },
-                  pattern: {
-                    value:
-                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-                    message: "This is not a valid email",
-                  },
-                })}
-                className={`border-b border-subTwo bg-inherit outline-none p-2 ${
-                  errors.email ? `ring-2 ring-red-500 focus:ring-red-500` : null
-                }`}
-              ></input>
-            </div>
-            <div className="flex flex-col xl:w-[200px]">
-              <label htmlFor="phone">{t("common:contactPhone")}</label>
-              <input
-                type="text"
-                {...register("phone")}
-                className="border-b border-subTwo bg-inherit outline-none p-2"
-              ></input>
-            </div>
-            <div className="flex flex-col xl:w-[200px]">
-              <label htmlFor="date">{t("common:contactDate")}</label>
-              <input
-                type="date"
-                {...register("date")}
-                className="border-b border-subTwo bg-inherit outline-none p-2"
-              ></input>
-            </div>
-            <div className="flex flex-col xl:w-[200px]">
-              <label htmlFor="time">{t("common:contactTime")}</label>
-              <input
-                type="text"
-                {...register("time")}
-                className="border-b border-subTwo bg-inherit outline-none p-2"
-                placeholder="17:00"
-              ></input>
+            <div className="flex flex-col">
+              <label htmlFor="topic">{t("common:contactTopic")}</label>
+              <select
+                {...register("topic")}
+                className="bg-inherit p-2 border-b border-subTwo"
+              >
+                {newList.map((list, index) => (
+                  <option key={index} value={list} className="bg-bgCol">
+                    {list}
+                  </option>
+                ))}
+              </select>
+              <textarea
+                {...register("msg")}
+                placeholder={t("common:contactMsg")}
+                className="p-2 outline-none border focus:border-subTwo mt-2 bg-inherit"
+              ></textarea>
             </div>
           </div>
 

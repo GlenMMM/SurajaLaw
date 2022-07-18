@@ -62,19 +62,21 @@ export default async function (req, res) {
     },
     secure: true,
   });
-  const { name, email, time, date, phone } = req.body;
+  const { name, email, time, date, phone, topic, msg } = req.body;
   const mailData = {
     from: process.env.user,
     to: "ultraqmik@gmail.com",
     replyTo: email,
     subject: `SURAJA LAW OFFICES contact form submission from ${name}`,
-    html: `<p>Ada Permintaan Penjadwalan Konsultasi Baru, dari</p><br>
-          <p><strong>Nama: </strong> ${name}</p><br>
-          <p><strong>Email: </strong> ${email}</p><br>
-          <p><strong>Nomor Whatsapp: </strong> ${phone}</p><br>
-          <p><strong>Tanggal: </strong> ${date}</p><br>
-          <p><strong>Jam Konsultasi: </strong> ${time}</p><br>
-          <p>Hubungi pemohon untuk memastikan penjadwalan konsultasi.</p>
+    html: `<p><strong>Ada Permintaan Penjadwalan Konsultasi Baru, dari </strong></p>
+          <p><strong>Nama: </strong> ${name}</p>
+          <p><strong>Email: </strong> ${email}</p>
+          <p><strong>Nomor Whatsapp: </strong> ${phone}</p>
+          <p><strong>Tanggal: </strong> ${date}</p>
+          <p><strong>Jam Konsultasi: </strong> ${time}</p>
+          <p><strong>Topic Konsultasi: </strong> ${topic}</p>
+          <p><strong>Deskripsi Masalah: </strong> ${msg}</p>          
+          <p><strong>Hubungi pemohon untuk memastikan penjadwalan konsultasi.</strong></p>
           `,
   };
   await new Promise((resolve, reject) => {
