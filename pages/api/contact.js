@@ -65,7 +65,7 @@ export default async function (req, res) {
   const { name, email, time, date, phone, topic, msg } = req.body;
   const mailData = {
     from: process.env.user,
-    to: "ultraqmik@gmail.com",
+    to: "info@surajalaw.com",
     replyTo: email,
     subject: `SURAJA LAW OFFICES contact form submission from ${name}`,
     html: `<p><strong>Ada Permintaan Penjadwalan Konsultasi Baru, dari </strong></p>

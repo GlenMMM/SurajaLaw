@@ -112,8 +112,17 @@ function Contact({ t }) {
                 <label htmlFor="phone">{t("common:contactPhone")}</label>
                 <input
                   type="text"
-                  {...register("phone")}
-                  className="border-b border-subTwo bg-inherit outline-none p-2"
+                  {...register("phone", {
+                    required: {
+                      value: true,
+                      message: "You must enter your whatsapp number",
+                    },
+                  })}
+                  className={`border-b border-subTwo bg-inherit outline-none p-2 ${
+                    errors.phone
+                      ? `ring-2 ring-red-500 focus:ring-red-500`
+                      : null
+                  }`}
                 ></input>
               </div>
               <div className="flex flex-col xl:w-[200px]">
