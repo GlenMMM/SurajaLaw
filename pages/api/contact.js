@@ -71,7 +71,7 @@ export default async function (req, res) {
     html: `<p><strong>Ada Permintaan Penjadwalan Konsultasi Baru, dari </strong></p>
           <p><strong>Nama: </strong> ${name}</p>
           <p><strong>Email: </strong> ${email}</p>
-          <p><strong>Nomor Whatsapp: </strong> ${phone}</p>
+          <p><strong>Nomor Whatsapp: </strong> <a href="https://wa.me/${phone}">${phone}</a></p>
           <p><strong>Tanggal: </strong> ${date}</p>
           <p><strong>Jam Konsultasi: </strong> ${time}</p>
           <p><strong>Topic Konsultasi: </strong> ${topic}</p>
