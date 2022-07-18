@@ -59,7 +59,7 @@ function Contact({ t }) {
           className="flex flex-col gap-2 items-center w-full"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex flex-col gap-10 justify-evenly w-full">
+          <div className="flex flex-col gap-10 justify-evenly w-full xl:px-12">
             <div className="flex flex-col xl:flex-row justify-between w-full gap-10 xl:gap-0">
               <div className="flex flex-col xl:w-[200px]">
                 <label htmlFor="name">{t("common:contactName")}</label>
