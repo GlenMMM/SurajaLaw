@@ -35,7 +35,7 @@ const Navbar = ({ toggle, route, router, t }) => {
               {t("common:navAbout")}
             </a>
           </Link>
-          <Link className="p-4" href="#services" passHref>
+          <Link className="p-4" href="/#services" passHref>
             <a
               className={`hover:opacity-100 opacity-80 items-center gap-2
               }`}
@@ -43,7 +43,7 @@ const Navbar = ({ toggle, route, router, t }) => {
               {t("common:navServices")}
             </a>
           </Link>
-          <Link className="p-4" href="#contact" passHref>
+          <Link className="p-4" href="/#contact" passHref>
             <a className={`hover:opacity-100 opacity-80 items-center gap-2`}>
               {t("common:navContact")}
             </a>
