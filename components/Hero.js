@@ -10,7 +10,6 @@ function Hero({ t }) {
       <div className="sm:h-[250px] md:w-[300px] lg:w-[400px] lg:h-[300px] border-2 border-boxBorder absolute top-[170px] md:top-[140px] -right-[30px] md:right-[40px] z-0 " />
       <div className="w-[200px] h-[240px] md:w-[400px] md:h-[350px] border-2 border-boxBorder absolute top-[280px] -left-[100px] z-0 " />
       <div className="md:h-[200px] lg:w-[350px] lg:h-[300px] xl:w-[500px] xl:h-[400px] border-2 border-boxBorder absolute top-[550px] -left-[100px] md:top-[350px] md:left-[400px] xl:left-[500px] z-0 " />
-      <div className="sm:w-[360px] border-2 border-boxBorder absolute top-[470px] xl:top-[540px] left-[140px] xl:left-[200px] z-0 " />
       <div className="lg:w-[200px] lg:h-[200px] border-2 border-boxBorder absolute top-[440px] sm:top-[400px] md:top-[360px] xl:top-[380px] right-0 z-0" />
       <div className="sm:w-[140px] sm:h-[140px] lg:w-[200px] lg:h-[200px] border-2 border-boxBorder absolute top-[600px] lg:top-[550px] right-0 sm:right-[40px] lg:right-[70px] z-0 " />
       <div className="sm:w-[240px] lg:w-[330px] lg:h-[440px] xl:w-[430px] border-2 border-boxBorder absolute top-[800px] lg:top-[730px] xl:top-[670px] xl:right-[100px] right-0 z-0" />
