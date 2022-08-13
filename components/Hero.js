@@ -20,7 +20,7 @@ function Hero({ t }) {
           <h1 className="text-[32px] xl:text-[90px] xl:w-[800px]">
             {t("common:heroTag")}
           </h1>
-          <h3 className="text-[18px] xl:text-[32px] text-subTwo font-alta">
+          <h3 className="text-[18px] xl:text-[32px] text-subTwo">
             {t("common:heroSub")}
           </h3>
           <button className="border border-subOne px-4 py-2 text-[19px]">

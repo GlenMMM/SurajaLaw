@@ -11,7 +11,6 @@ module.exports = {
       fontFamily: {
         lato: ["Lato"],
         barlow: ["Barlow Condensed"],
-        alta: ["alta"],
       },
       colors: {
         main: "#294745",

@@ -51,7 +51,7 @@ function Contact({ t }) {
             {t("common:contactTtl")}
           </h2>
         </div>
-        <h3 className="text-[24px] xl:text-[40px] py-[19px] font-alta pb-10">
+        <h3 className="text-[24px] xl:text-[40px] py-[19px] pb-10">
           {t("common:contactTag")}
           <span className="text-subTwo">{t("common:contactTag2")}</span>
         </h3>
