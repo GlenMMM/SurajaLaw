@@ -40,10 +40,7 @@ const Sidebar = ({ isOpen, toggle, route, t }) => {
         </div>
 
         <div className="w-full flex flex-col h-full justify-start pt-[160px] z-40">
-          <ul
-            className="px-5 pt-3 text-[22px] -mt-40 text-subTwo w-full z-10"
-            onClick={toggle}
-          >
+          <ul className="px-5 pt-3 text-[22px] -mt-40 text-subTwo w-full z-10">
             <li className="w-full">
               <Link href="/" passHref>
                 <a className={`block py-3 px-5`}>{t("common:navHome")}</a>
