@@ -19,7 +19,6 @@ function Services({ t }) {
         </h3>
         <div className="flex flex-col xl:flex-row items-center gap-4  justify-between w-full xl:pt-[120px]">
           <div className="relative p-4 shadow-xl w-[320px] h-[320px] bg-white flex items-center justify-center">
-            <div className="hidden xl:flex absolute top-[40px] right-[20px] border-2 border-boxBorder w-[320px] h-[320px]" />
             <ul className="list-['-'] flex flex-col gap-[8px] text-[16px] md:text-[22px] p-[20px] w-full">
               <svg
                 width="37"
@@ -45,7 +44,6 @@ function Services({ t }) {
             </ul>
           </div>
           <div className="relative p-4 shadow-xl w-[320px] h-[320px] bg-white flex items-center justify-center">
-            <div className="hidden xl:flex absolute bottom-[40px] left-[20px] border-2 border-boxBorder w-[320px] h-[320px]" />
             <ul className="list-['-'] flex flex-col gap-[8px] text-[16px] md:text-[22px] p-[20px] w-full">
               <svg
                 width="37"
@@ -67,7 +65,6 @@ function Services({ t }) {
             </ul>
           </div>
           <div className="relative p-4 shadow-xl w-[320px] h-[320px] bg-white flex items-center justify-center">
-            <div className="hidden xl:flex absolute top-[40px] left-[20px] border-2 border-boxBorder w-[320px] h-[320px]" />
             <ul className="list-['-'] flex flex-col gap-[8px] text-[16px] md:text-[22px] p-[20px] w-full">
               <svg
                 width="37"
