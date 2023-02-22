@@ -11,20 +11,16 @@ const Sidebar = ({ isOpen, toggle, route, t }) => {
       }
     >
       <div className="absolute  top-0 right-0 z-30 w-full bg-bgCol h-full text-main overflow-hidden">
-        <div className="absolute top-[70px] right-[45px] w-[250px] h-[250px] border-2 border-boxBorder z-0" />
-        <div className="absolute top-[0px] right-[0px] w-[140px] h-[100px] border-2 border-boxBorder z-0" />
-        <div className="absolute top-[0px] left-[0px] w-[100px] h-[120px] border-2 border-boxBorder z-0" />
-        <div className="absolute top-[300px] left-[0px] w-[150px] h-[150px] border-2 border-boxBorder z-0" />
-        <div className="absolute bottom-[0px] right-[0px] w-[250px] h-[100px] border-2 border-boxBorder z-0" />
-        <div className="flex py-7 items-center justify-between px-10 md:px-24 z-10">
+        <div className="flex py-4 items-center justify-between px-4 md:px-24 z-10">
           <Link href="/" passHref>
-            <Image
-              className="object-contain cursor-pointer"
-              src="/surajalaw-logo.png"
-              alt="surajalaw logo"
-              width={140}
-              height={40}
-            />
+            <div className="relative w-[140px] h-[40px]">
+              <Image
+                className="object-contain cursor-pointer"
+                src="/surajalaw-logo.png"
+                alt="surajalaw logo"
+                layout="fill"
+              />
+            </div>
           </Link>
 
           <div className="cursor-pointer z-10" onClick={toggle}>

@@ -8,22 +8,6 @@ const Navbar = ({ toggle, route, router, t }) => {
       role="navigation"
     >
       <div className="flex justify-between items-center w-full max-w-[500px] md:max-w-[640px] xl:max-w-[980px] 2xl:max-w-[1280px] pt-2">
-        <div className="cursor-pointer md:hidden" onClick={toggle}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="main"
-            viewBox="0 0 24 24"
-            stroke="black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </div>
         <div className="md:flex hidden space-x-10 items-center justify-center text-black xl:text-[18px]">
           <Link className="p-4" href="/" passHref>
             <a className={`hover:opacity-100 opacity-80 items-center gap-2 `}>
@@ -61,7 +45,7 @@ const Navbar = ({ toggle, route, router, t }) => {
               />
             </Link>
           </div>
-          <div className="absolute right-0 md:-mr-[50px]">
+          <div className="md:absolute md:right-0 md:-mr-[50px]">
             {router.locale === "en-US" ? (
               <Link href={router.asPath} locale={"id"}>
                 <a className="text-[24px]">EN</a>
@@ -72,6 +56,22 @@ const Navbar = ({ toggle, route, router, t }) => {
               </Link>
             )}
           </div>
+        </div>
+        <div className="cursor-pointer md:hidden" onClick={toggle}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="main"
+            viewBox="0 0 24 24"
+            stroke="black"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
         </div>
       </div>
     </nav>
