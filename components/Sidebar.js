@@ -41,22 +41,22 @@ const Sidebar = ({ isOpen, toggle, route, t }) => {
 
         <div className="w-full flex flex-col h-full justify-start pt-[160px] z-40">
           <ul className="px-5 pt-3 text-[22px] -mt-40 text-subTwo w-full z-10">
-            <li className="w-full">
+            <li className="" onClick={toggle}>
               <Link href="/" passHref>
                 <a className={`block py-3 px-5`}>{t("common:navHome")}</a>
               </Link>
             </li>
-            <li className="w-full">
+            <li className="" onClick={toggle}>
               <Link href="/about" passHref>
                 <a className={`block py-3 px-5`}>{t("common:navAbout")}</a>
               </Link>
             </li>
-            <li className="w-full">
+            <li className="" onClick={toggle}>
               <Link href="/#services" passHref>
                 <a className={`block py-3 px-5`}>{t("common:navServices")}</a>
               </Link>
             </li>
-            <li className="w-full">
+            <li className="" onClick={toggle}>
               <Link href="/#contact" passHref>
                 <a className={`block py-3 px-5`}>{t("common:navContact")}</a>
               </Link>
